@@ -6,18 +6,23 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <form name="contact" method="POST" data-netlify="true">
+          <div>
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div>
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="email" />
+          </div>
+          <div>
+            <label htmlFor="message">Message</label>
+            <textarea id="message" name="message" />
+          </div>
+          <div>
+            <button type="submit">Send</button>
+          </div>
+        </form>
       </header>
     </div>
   );
