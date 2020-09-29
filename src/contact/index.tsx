@@ -1,4 +1,5 @@
 import * as React from 'react'
+import TextField from "./text-field";
 
 interface State {
     name: string
@@ -29,23 +30,47 @@ const Contact = () => {
             <header>
                 <form name="contact" method="POST">
                     <input type="hidden" name="form-name" value="contact" />
-                    <div>
-                        <label htmlFor="name">Name</label>
-                        <input type="text" id="name" name="name" />
+                    <div className="form-group">
+                        <TextField
+                            name="name"
+                            type="text"
+                            value={formValues.name}
+                            label="Name"
+                            placeholder=""
+                            onChange={composeValues}
+                        />
                     </div>
-                    <div>
-                        <label htmlFor="email">Email</label>
-                        <input type="email" id="email" name="email" />
+                    <div className="form-group">
+                        <TextField
+                            name="email"
+                            type="email"
+                            value={formValues.email}
+                            label="Email"
+                            placeholder=""
+                            onChange={composeValues}
+                        />
                     </div>
-                    <div>
-                        <label htmlFor="tel">Tel</label>
-                        <input type="text" id="tel" name="tel" />
+                    <div className="form-group">
+                        <TextField
+                            name="tel"
+                            type="text"
+                            value={formValues.tel}
+                            label="Tel"
+                            placeholder=""
+                            onChange={composeValues}
+                        />
                     </div>
-                    <div>
-                        <label htmlFor="message">Message</label>
-                        <textarea id="message" name="message" />
+                    <div className="form-group">
+                        <TextField
+                            name="message"
+                            type="text"
+                            value={formValues.message}
+                            label="Message"
+                            placeholder="message"
+                            onChange={composeValues}
+                        />
                     </div>
-                    <div>
+                    <div className="form-group">
                         <button type="submit">Send</button>
                     </div>
                 </form>
